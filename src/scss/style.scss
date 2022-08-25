@@ -1,0 +1,21 @@
+@import "../libs/reset/reset";
+@import "./import";
+@import "./variables";
+@import "../libs/burger/burger";
+@import "../libs/scroll-to-top/scroll-to-top";
+
+body {
+  font-size: $font-size;
+  color: $font-color;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+
+  &__logo {
+
+    @media (min-width: $screen-md) {
+      //display: none;
+    }
+  }
+}

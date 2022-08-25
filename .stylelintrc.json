@@ -1,0 +1,28 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "max-empty-lines": 1,
+    "no-duplicate-selectors": true,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "scss/dollar-variable-pattern": "^[a-z\\d](?:[a-z\\d]|-(?=[a-z\\d]))*$",
+    "selector-class-pattern": [
+      "^[a-zA-Z0-9-]+[a-zA-Z0-9_]+([a-z0-9-]+)?(--[a-z0-9-]+)?([a-z0-9__]+)?([a-z][a-zA-Z0-9]+$)?$",
+      {
+        "message": "Please follow BEM naming conventions",
+        "resolveNestedSelectors": true
+      }
+    ],
+    "selector-max-id": [0],
+    "string-quotes": "single",
+    "value-no-vendor-prefix": true,
+    "font-family-no-missing-generic-family-keyword": null,
+    "no-descending-specificity": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ]
+  }
+}

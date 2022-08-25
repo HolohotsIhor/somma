@@ -1,0 +1,28 @@
+.scrollup {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  display: none;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  z-index: 20;
+  background-color: #ab7225;
+  color: $white;
+  transition: .2s;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  font-size: 40px;
+  line-height: 34px;
+  text-align: center;
+  transform: rotate(-90deg);
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ab7225;
+    color: $white;
+  }
+}
