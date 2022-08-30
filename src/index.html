@@ -5,19 +5,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/style.min.css">
-	<title>New Project</title>
+	<title>Sonma</title>
 </head>
 
 <body>
 @@include('_header.html')
 <!-- Slier -->
-<section class="banner">
-	<div class="container">
-		<h1 class="banner__description">
-			Hello world!
-		</h1>
+<div class="owl-carousel owl-theme">
+	<div class="owl-carousel__item">
+		<div class="owl-carousel__overlay">
+			<img src="img/slide-1.jpg" alt="slide">
+		</div>
+		<div class="owl-carousel__description">
+			<h3 class="owl-carousel__title">Матраци</h3>
+			<p class="owl-carousel__about">Обери свій</p>
+			<a href="#" class="owl-carousel__btn">Детальніше</a>
+			<a href="#" class="owl-carousel__line"></a>
+		</div>
 	</div>
-</section>
+	<div class="owl-carousel__item">
+		<div class="owl-carousel__overlay">
+			<img src="img/slide-1.jpg" alt="slide">
+		</div>
+		<div class="owl-carousel__description">
+			<h3 class="owl-carousel__title">Матраци</h3>
+			<p class="owl-carousel__about">Обери свій</p>
+			<a href="#" class="owl-carousel__btn">Детальніше</a>
+			<a href="#" class="owl-carousel__line"></a>
+		</div>
+	</div>
+</div>
 @@include('_footer.html')
 <script src="js/script.min.js"></script>
 </body>
