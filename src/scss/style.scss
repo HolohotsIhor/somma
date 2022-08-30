@@ -50,9 +50,20 @@ body {
   }
 }
 
-@keyframes line{
+@keyframes line {
   0% {top:0}
   100% {top:10rem}
+}
+
+@keyframes reveal {
+  0%{
+    opacity:0;
+    transform:translateY(-100%)
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0)
+  }
 }
 
 .social {
@@ -87,7 +98,14 @@ body {
 .animate-revealleft {
   opacity:0;
   animation: revealLeft 1s cubic-bezier(0,1,.5,1) 1 normal forwards;
-  animation-delay:1s;
+  animation-delay: 1s;
+}
+
+.revealright-lg-off {
+  @media (min-width: $screen-md) {
+    opacity: 1;
+    animation: unset;
+  }
 }
 
 .header {
@@ -109,6 +127,14 @@ body {
 
     @media (min-width: $screen-md) {
       display: flex;
+    }
+  }
+
+  .animate-reveal-lg {
+    @media (min-width: $screen-md) {
+      opacity: 0;
+      animation-delay: 1s;
+      animation: reveal 1s cubic-bezier(0,1,.5,1) 1 normal forwards;
     }
   }
 
@@ -223,7 +249,51 @@ body {
     align-items: center;
 
     @media (min-width: $screen-md) {
+      display: block;
+    }
+
+    & > div {
+      height: 100%;
+    }
+
+    &--left {
+      .menu {
+        justify-content: right;
+      }
+    }
+
+    &--right {
+      .menu {
+        justify-content: left;
+      }
+    }
+
+    .menu {
       display: flex;
+      align-items: center;
+      height: 100%;
+
+      .sub-menu {
+        display: none;
+      }
+
+      li {
+        margin-right: 3rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          color: $white;
+          text-transform: uppercase;
+          font-size: 1rem;
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
     }
   }
 }
