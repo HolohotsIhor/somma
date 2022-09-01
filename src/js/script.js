@@ -4,7 +4,7 @@
 @@include('../libs/burger/burger.js');
 @@include('../libs/scroll-to-top/scroll-to-top.js');
 
-$(document).ready(function() {
+$(document).ready(function(d) {
     /* Owl carousel */
     var owl = $('.owl-carousel');
     owl.owlCarousel({
@@ -27,4 +27,23 @@ $(document).ready(function() {
             }
         }
     });
-});
+
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+    const header = d.getElementById("header");
+    const logo = d.getElementById("logo");
+    const logoLight = d.getElementById("logo-light");
+    const sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            logo.classList.add("sticky");
+            logoLight.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+            logo.classList.remove("sticky");
+            logoLight.classList.remove("sticky");
+        }
+    }
+}(document));
