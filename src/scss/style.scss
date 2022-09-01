@@ -1,3 +1,12 @@
+/*
+  1.  Includes
+  2.  Header
+  3.  Slider
+  4.  About us
+  5.  Catalog
+*/
+
+/* 1.  Includes */
 @import "../libs/reset/reset";
 @import "./import";
 @import "./variables";
@@ -23,6 +32,7 @@ html {
 }
 
 body {
+  line-height: $font-size;
   font-size: $font-size;
   color: $font-color;
   font-family: 'Roboto', sans-serif;
@@ -86,6 +96,50 @@ body {
   }
 }
 
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+
+  @media (min-width: $screen-md) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 100;
+
+  @media (min-width: $screen-md) {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+p {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  text-align: left;
+
+  @media (min-width: $screen-md) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+}
+
+.font-gold {
+  color: $gold;
+}
+
+.font-regular {
+  font-weight: 300;
+}
+
 .social {
   margin-right: 2rem;
 
@@ -128,6 +182,7 @@ body {
   }
 }
 
+/* 2.  Header */
 .header {
   position: fixed;
   top: 0;
@@ -497,6 +552,7 @@ body {
   }
 }
 
+/* 3.  Slider */
 .owl-carousel {
   margin-top: $header;
   overflow: hidden;
@@ -595,7 +651,7 @@ body {
       width: 100%;
       height: 100%;
       background-color: $black;
-      opacity: .5;
+      opacity: .3;
     }
 
     picture {
@@ -613,7 +669,6 @@ body {
   }
 
   &__title {
-    font-weight: 600;
     font-size: 2rem;
     margin-bottom: 1.4rem;
 
@@ -629,6 +684,8 @@ body {
   &__about {
     font-size: 1rem;
     margin-bottom: 1.2rem;
+    font-weight: 100;
+    text-align: center;
 
     @media (min-width: $screen-sm) {
       font-size: 1.4rem
@@ -645,7 +702,7 @@ body {
     color: $white;
     display: inline-block;
     transition: border-color .2s;
-    font-weight: bold;
+    font-weight: 100;
 
     @media (min-width: $screen-sm) {
       font-size: 1.4rem;
@@ -679,6 +736,75 @@ body {
 
     @media (min-width: $screen-lg) {
       top: 23rem;
+    }
+  }
+}
+
+/* 4.  About us */
+.about-us {
+  &__paragraph {
+    margin-bottom: 2rem;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+/* 5.  Catalog */
+.catalog {
+  &__wrapper {
+    border: 1px solid #eee;
+    padding: 2rem 1rem;
+    display: block;
+
+    @media (min-width: $screen-md) {
+      padding: 3rem 2rem;
+    }
+  }
+
+  &__item {
+    margin-bottom: 2rem;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    color: $font-color;
+  }
+
+  &__price {
+    color: $font-color;
+    text-transform: uppercase;
+  }
+
+  &__buy {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    display: block;
+    text-transform: uppercase;
+    color: $font-color;
+    font-size: .9rem;
+    transition: .2s;
+
+    &:hover {
+      color: $white;
+      background-color: $gold;
     }
   }
 }

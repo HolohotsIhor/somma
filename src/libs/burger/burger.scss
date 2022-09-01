@@ -141,10 +141,15 @@
       margin-left: 0;
       border-bottom: 1px solid #e5e5e5;
 
+      &.current-menu-parent > a{
+        color: $gold;
+      }
+
       &.menu-item-has-children {
         &.active {
           ul {
             display: block;
+            padding-left: 1rem;
           }
         }
 
@@ -153,6 +158,8 @@
           display: none;
 
           li {
+            border-bottom: none;
+
             &:last-child {
               border-bottom: 0;
             }
