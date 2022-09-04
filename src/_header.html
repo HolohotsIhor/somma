@@ -1,50 +1,57 @@
 <header class="header" id="header">
-    <div class="container">
-        <div class="row header__top-bar">
-            <div class="col-md-6 header__search">
-                <form role="search" method="get" id="searchform" class="searchform" action="#">
-                    <div>
-                        <label class="screen-reader-text" for="s">Search for:</label>
-                        <input type="text" value="" name="s" id="s" placeholder="Почніть пошук тут...">
-                        <input type="submit" id="searchsubmit" value="Search">
+    <div class="header__top-wrapper">
+        <div class="container">
+            <div class="row header__top-bar">
+                <div class="col-md-6 header__search">
+                    <form role="search" method="get" id="searchform" class="searchform" action="#">
+                        <div>
+                            <label class="screen-reader-text" for="s">Search for:</label>
+                            <input type="text" value="" name="s" id="s" placeholder="Почніть пошук тут...">
+                            <input type="submit" id="searchsubmit" value="Search">
+                        </div>
+                    </form>
+                    <div class="header__language-switcher">
+                        <select name="lang_choice_1" id="lang_choice_1" class="pll-switcher-select">
+                            <option value="#" lang="uk" selected="selected">Ua</option>
+                            <option value="#" lang="ru-RU">Ru</option>
+                            <option value="#" lang="ru-RU">En</option>
+                        </select>
                     </div>
-                </form>
-                <div class="header__language-switcher">
-                    <select name="lang_choice_1" id="lang_choice_1" class="pll-switcher-select">
-                        <option value="#" lang="uk" selected="selected">Ua</option>
-                        <option value="#" lang="ru-RU">Ru</option>
-                        <option value="#" lang="ru-RU">En</option>
-                    </select>
                 </div>
-            </div>
-            <div class="col-md-6 header__contacts">
-                <a href="tel:0687100101" class="header__phone">+38 (068) 71-001-01</a>
-                <div class="social">
-                    <a href="#" class="social__item" target="_blank">
-                        <svg width="14px" height="14px" x="0px" y="0px" viewBox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve">
-                            <g>
-                                <path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
-                                    c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
-                                <circle cx="41.5" cy="16.4" r="2.9"/>
-                                <path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
-                                    h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
-                                    s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
-                                    c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
-                            </g>
+                <div class="col-md-6 header__contacts">
+                    <a href="tel:0687100101" class="header__phone">+38 (068) 71-001-01</a>
+                    <div class="social">
+                        <a href="https://www.instagram.com/sonma_company/" class="social__item" target="_blank">
+                            <svg width="14px" height="14px" x="0px" y="0px" viewBox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve">
+                                <g>
+                                    <path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+                                        c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+                                    <circle cx="41.5" cy="16.4" r="2.9"/>
+                                    <path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+                                        h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+                                        s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+                                        c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="https://m.facebook.com/SonmaCompany" class="social__item" target="_blank">
+                            <svg viewBox="0 0 30 30" width="16px" height="16px">
+                                <path d="M15,3C8.373,3,3,8.373,3,15c0,6.016,4.432,10.984,10.206,11.852V18.18h-2.969v-3.154h2.969v-2.099c0-3.475,1.693-5,4.581-5 c1.383,0,2.115,0.103,2.461,0.149v2.753h-1.97c-1.226,0-1.654,1.163-1.654,2.473v1.724h3.593L19.73,18.18h-3.106v8.697 C22.481,26.083,27,21.075,27,15C27,8.373,21.627,3,15,3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <a href="#" class="header__login">
+                        <svg width="19" height="18" viewBox="0 0 19 18">
+                            <path d="M10.255 1.686c1.397 0 2.53 1.133 2.53 2.53 0 1.397-1.133 2.53-2.53 2.53-1.397 0-2.53-1.133-2.53-2.53 0-1.397 1.133-2.53 2.53-2.53m0 9.275c2.214-.01 4.34.868 5.902 2.436v2.623H4.353v-2.606c1.56-1.575 3.685-2.458 5.902-2.453m0-10.118c-1.863 0-3.373 1.51-3.373 3.373 0 1.862 1.51 3.372 3.373 3.372 1.863 0 3.372-1.51 3.372-3.372 0-1.863-1.51-3.373-3.372-3.373zm0 9.275c-2.44 0-4.778.971-6.5 2.698l-.245.253v3.794H17v-3.794l-.245-.253c-1.722-1.727-4.061-2.697-6.5-2.698z"></path>
                         </svg>
                     </a>
                 </div>
-                <a href="#" class="header__login">
-                    <svg width="19" height="18" viewBox="0 0 19 18">
-                        <path d="M10.255 1.686c1.397 0 2.53 1.133 2.53 2.53 0 1.397-1.133 2.53-2.53 2.53-1.397 0-2.53-1.133-2.53-2.53 0-1.397 1.133-2.53 2.53-2.53m0 9.275c2.214-.01 4.34.868 5.902 2.436v2.623H4.353v-2.606c1.56-1.575 3.685-2.458 5.902-2.453m0-10.118c-1.863 0-3.373 1.51-3.373 3.373 0 1.862 1.51 3.372 3.373 3.372 1.863 0 3.372-1.51 3.372-3.372 0-1.863-1.51-3.373-3.372-3.373zm0 9.275c-2.44 0-4.778.971-6.5 2.698l-.245.253v3.794H17v-3.794l-.245-.253c-1.722-1.727-4.061-2.697-6.5-2.698z"></path>
-                    </svg>
-                </a>
             </div>
         </div>
     </div>
-    <div class="header__bottom-container">
+    <div class="header__bottom-container animate-reveal-lg">
         <div class="container">
-            <div class="row header__bottom animate-reveal-lg">
+            <div class="row header__bottom">
                 <div class="col-lg-4 header__menu header__menu--left">
                     <nav class="header__nav">
                         <div class="menu-glavnoe-menyu-container">

@@ -60,6 +60,6 @@ $(document).ready(function(d, w) {
     };
 
     $(w).scroll(function() {
-        addAnimation('.mov', 'animate-revealright');
+        addAnimation('.mov', 'fadeIn');
     });
 }(document, window));
