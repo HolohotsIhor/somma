@@ -6,12 +6,14 @@
 
 $(document).ready(function(d, w) {
     /* Owl carousel */
-    var owl = $('.owl-carousel');
+    const owl = $(".owl-slider");
+    const owlClients = $(".clients__owl-carousel");
+
     owl.owlCarousel({
         nav: true,
         loop: true,
         autoplay: true,
-        autoplayTimeout: 100000,
+        autoplayTimeout: 5000,
         responsive: {
             0: {
                 items: 1
@@ -24,6 +26,27 @@ $(document).ready(function(d, w) {
             },
             1200: {
                 items: 1
+            }
+        }
+    });
+
+    owlClients.owlCarousel({
+        nav: false,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            960: {
+                items: 3
+            },
+            1200: {
+                items: 4
             }
         }
     });

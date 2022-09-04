@@ -5,6 +5,7 @@
   4.  About us
   5.  Catalog
   6.  Why us?
+  7.  Clients
 */
 
 /* 1.  Includes */
@@ -37,7 +38,7 @@ body {
   font-size: $font-size;
   color: $font-color;
   font-family: 'Roboto', sans-serif;
-  overflow: scroll;
+  overflow-x: hidden;
 }
 
 @keyframes revealRight {
@@ -136,6 +137,17 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 100;
+
+  @media (min-width: $screen-md) {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
 p {
   font-weight: 300;
   font-size: 1rem;
@@ -169,7 +181,7 @@ p {
     transition: background-color .3s;
 
     @media (min-width: $screen-md) {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     &:hover {
@@ -933,5 +945,79 @@ p {
   &__description {
     text-align: center;
     font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+}
+
+/* 7.  Clients */
+.clients {
+
+  h3 {
+    @media (min-width: $screen-md) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__photo {
+    margin-right: 1rem;
+
+    picture {
+      source,
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__name {
+    text-align: left;
+
+    @media (min-width: $screen-md) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__buy {
+    font-style: italic;
+    font-size: .8rem;
+    display: block;
+    margin-top: .2rem;
+    color: $gold;
+    font-weight: 300;
+
+    @media (min-width: $screen-md) {
+      font-size: 1rem;
+      margin-top: .5rem;
+    }
+  }
+
+  &__description {
+    margin-top: 1rem;
+    font-style: italic;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7rem;
+
+    @media (min-width: $screen-md) {
+      font-size: 1.3rem;
+      line-height: 2rem;
+      margin-top: 2rem;
+    }
+  }
+
+  &__item {
+    padding: 2rem 2rem 0;
+
+    @media (min-width: $screen-md) {
+      padding: 2rem 3rem 0;
+    }
   }
 }
