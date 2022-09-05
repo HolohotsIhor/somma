@@ -183,7 +183,7 @@
 <!-- Last blog news-->
 <section class="last-news">
 	<div class="container">
-		<h2>Останні публікації</h2>
+		<h2 class="mov">Останні публікації</h2>
 		<div class="row">
 			<div class="col-md-6 col-lg-3 last-news__item">
 				<a href="#" class="last-news__link">
@@ -233,6 +233,72 @@
 		<div class="last-news__link-wrapper">
 			<a href="#" class="last-news__all-news">Всі новини</a>
 		</div>
+	</div>
+</section>
+
+<!-- About product -->
+<section class="section about-product">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 about-product__image">
+				<img src="img/product-show.png" alt="product">
+			</div>
+			<div class="col-md-5 offset-md-1">
+				<h3 class="mov">Продукція <span class="font-gold">Sonma</span></h3>
+				<div class="about-product__description mov">
+					<p>
+						Sonma Company – це молода та інноваційно-технологічна компанія, основним напрямком діяльності
+						якої є виробництво предметів мебельної промисловості та супутніх товарів.
+					</p>
+					<p>
+						Портфоліо компанії складається з десятків видів товарів широкого вжитку самої різної
+						конфігурації та цінового сегменту. Весь асортимент продукції відповідає європейським нормам та
+						стандартам якості. У виробництві використовується виключно найсучасніше зарубіжне обладнання
+						та матеріали від кращих світових постачальників.
+					</p>
+					<p>
+						Метою Sonma Company є покращення життя, забезпечення здорового майбутнього та солодкого сну.
+						Своїми виробами ми надихаємо людей жити з комфортом та здоровим життям. Саме так ми вносимо
+						свій внесок у суспільство.
+					</p>
+					<p>
+						Наша місія – служіння людству, що відображається у виробництві товарів найкращої якості за
+						розумними цінами, тим самим сприяючи досягненню добробуту людей на всій планеті.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Feedback form -->
+<section class="section feedback-form">
+	<div class="container">
+		<div class="article-line">
+			<h3>Залишилися питання?</h3>
+		</div>
+		<p class="feedback-form__help">Заповніть форму нижче і наш менеджер зв'яжеться з Вами</p>
+		<form action="/kremen/kontakty/#wpcf7-f66-p16-o1" method="post" class="wpcf7-form invalid" novalidate="novalidate" data-status="invalid">
+			<p>
+				<span class="wpcf7-form-control-wrap your-name">
+					<input placeholder="Ім'я" type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid" aria-required="true" aria-invalid="true" aria-describedby="wpcf7-f66-p16-o1-ve-your-name">
+<!--					<span class="wpcf7-not-valid-tip" aria-hidden="true">Поле обязательно для заполнения.</span>-->
+				</span> </label>
+			</p>
+			<p>
+				<span class="wpcf7-form-control-wrap your-email">
+					<input placeholder="Email" type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email wpcf7-not-valid" aria-required="true" aria-invalid="true" aria-describedby="wpcf7-f66-p16-o1-ve-your-email">
+<!--					<span class="wpcf7-not-valid-tip" aria-hidden="true">Поле обязательно для заполнения.</span>-->
+				</span>
+			</p>
+			<p>
+				<span class="wpcf7-form-control-wrap tel-441">
+					<input placeholder="Телефон" type="tel" name="tel-441" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel wpcf7-not-valid" aria-required="true" aria-invalid="true" aria-describedby="wpcf7-f66-p16-o1-ve-tel-441">
+<!--					<span class="wpcf7-not-valid-tip" aria-hidden="true">Поле обязательно для заполнения.</span>-->
+				</span>
+			</p>
+			<p><input type="submit" value="Отправить" class="wpcf7-form-control has-spinner wpcf7-submit"></p>
+		</form>
 	</div>
 </section>
 @@include('_footer.html')

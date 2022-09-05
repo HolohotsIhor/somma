@@ -7,6 +7,9 @@
   6.  Why us?
   7.  Clients
   8.  Last news
+  9.  About product
+  10. Feedback form
+  11. Footer
 */
 
 /* 1.  Includes */
@@ -155,6 +158,30 @@ p {
   }
 }
 
+.article-line {
+  position: relative;
+
+  @media (min-width: $screen-md) {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 19px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #ccc;
+      z-index: -1;
+    }
+  }
+
+  h2,
+  h3 {
+    display: inline-block;
+    background-color: $white;
+    padding: 0 3rem;
+  }
+}
+
 .nav-tabs {
   display: flex;
   flex-wrap: unset;
@@ -199,6 +226,7 @@ p {
 
 .font-gold {
   color: $gold;
+  text-transform: uppercase;
 }
 
 .font-regular {
@@ -1079,6 +1107,8 @@ p {
   &__all-news {
     text-transform: uppercase;
     color: $font-color;
+    font-size: .9rem;
+    font-weight: 500;
     transition: opacity .2s;
 
     &:hover {
@@ -1092,3 +1122,121 @@ p {
     text-align: center;
   }
 }
+
+/* 9.  About product */
+.about-product {
+
+  h3 {
+    text-align: left;
+  }
+
+  &__description {
+    max-height: 200px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: .2em;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: $gold;
+      outline: 1px solid slategrey;
+    }
+
+    p {
+      text-align: left;
+
+      @media (min-width: $screen-md) {
+        line-height: 2.2rem;
+      }
+    }
+  }
+
+  &__image {
+    margin-bottom: 2rem;
+
+    @media (min-width: $screen-md) {
+      padding-top: 2rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* 10. Feedback form */
+.feedback-form {
+  .wpcf7-form {
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    & > p {
+      @media (min-width: $screen-md) {
+        width: 22%;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .wpcf7-submit {
+      background-color: transparent;
+      color: $font-color;
+      border: solid 1px $font-color;
+      transition: .2s;
+      font-size: .9rem;
+      text-transform: uppercase;
+      padding: .5rem 2rem;
+      margin-top: 1rem;
+      font-weight: 700;
+
+      @media (min-width: $screen-md) {
+        padding: .5rem 3.5rem;
+      }
+
+      &:hover {
+        color: $white;
+        background-color: $font-color;
+      }
+    }
+
+    .wpcf7-not-valid-tip {
+      color: $gold;
+      font-size: .9rem;
+    }
+
+    .wpcf7-form-control-wrap {
+      input {
+        border: none;
+        border-bottom: solid 1px #ccc;
+        transition: .2s;
+        padding: 1rem;
+        width: 100%;
+        font-size: 1rem;
+
+        &:focus {
+          outline: 0;
+          border-bottom-color: $gold;
+        }
+      }
+    }
+  }
+
+  &__help {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+/* 11. Footer */
