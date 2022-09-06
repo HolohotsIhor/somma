@@ -1240,3 +1240,128 @@ p {
 }
 
 /* 11. Footer */
+.footer {
+  padding: 1rem 0 0 0;
+  position: relative;
+  background: url("../img/bg-footer.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: center;
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 2rem;
+
+    source,
+    img {
+      max-width: 140px;
+    }
+  }
+
+  &__link {
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__contact-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5rem;
+
+    &:last-child {
+      margin-bottom: 2rem;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+
+    span {
+      font-size: 1rem;
+      color: #b5b5b5;
+    }
+  }
+
+  &__top-wrapp,
+  &__bottom-wrapp {
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    padding: 2rem 0;
+  }
+
+  &__contact {
+    @media (min-width: $screen-md) {
+      padding-top: 2rem;
+    }
+  }
+
+  &__menu {
+    text-transform: uppercase;
+    font-size: .9rem;
+    text-align: center;
+
+    h4 {
+      color: $white;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+
+  &__menu-wrapp {
+    @media (min-width: $screen-md) {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
+  .menu {
+    margin-bottom: 2rem;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-bottom: .2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $screen-md) {
+        margin-bottom: .4rem;
+      }
+
+      &.current-menu-item {
+        a {
+          color: $gold;
+        }
+      }
+
+      a{
+        color: rgba(255,255,255,.7);
+        transition: color .2s;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__after {
+    padding: 1rem 0;
+    background: rgba(0, 0, 0, .3);
+
+    p {
+      text-align: center;
+      font-size: .8rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0;
+    }
+  }
+}
