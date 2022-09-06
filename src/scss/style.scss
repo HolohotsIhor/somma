@@ -10,6 +10,7 @@
   9.  About product
   10. Feedback form
   11. Footer
+  12. Breadcrumbs
 */
 
 /* 1.  Includes */
@@ -1362,6 +1363,35 @@ p {
       font-size: .8rem;
       color: rgba(255, 255, 255, 0.7);
       margin-bottom: 0;
+    }
+  }
+}
+
+/* 12. Breadcrumbs */
+.breadcrumbs {
+  padding-top: 20rem;
+  position: relative;
+  background: url("../img/bg-footer.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: center;
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    color: $white;
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: #d5d5d5;
+      }
+    }
+
+    span {
+      margin: 0 .3rem;
     }
   }
 }
