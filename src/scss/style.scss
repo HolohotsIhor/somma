@@ -11,6 +11,11 @@
   10. Feedback form
   11. Footer
   12. Breadcrumbs
+  13. Write to
+  14. Map
+  15. Contact form
+  16. Paragraph
+  17. Cinnosty
 */
 
 /* 1.  Includes */
@@ -27,6 +32,10 @@ picture {
 
 a {
   text-decoration: none;
+}
+
+strong {
+  font-weight: 500;
 }
 
 picture,
@@ -72,6 +81,91 @@ body {
   animation-name: fadeIn;
   transition-duration: 1s;
 }
+
+@-webkit-keyframes fadeInLeftBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeftBig {
+  from {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeftBig {
+  animation-name: fadeInLeftBig;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRightBig {
+  animation-name: fadeInRightBig;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
 
 @keyframes revealLeft {
   0% {
@@ -263,7 +357,10 @@ p {
   animation-delay: 1s;
 }
 
-.mov {
+.mov,
+.mov-left,
+.mov-right,
+.mov-bounce {
   opacity: 0;
 }
 
@@ -1369,18 +1466,31 @@ p {
 
 /* 12. Breadcrumbs */
 .breadcrumbs {
-  padding-top: 20rem;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
   position: relative;
   background: url("../img/bg-footer.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position-y: top;
   background-position-x: center;
+  text-align: center;
+
+  @media (min-width: $screen-md) {
+    padding-top: 20rem;
+  }
+
+  &__title {
+    color: $white;
+    font-size: 2rem;
+  }
 
   &__nav {
     display: flex;
     justify-content: center;
     color: $white;
+    margin-bottom: 2rem;
+    font-size: .9rem;
 
     a {
       color: $white;
@@ -1392,6 +1502,224 @@ p {
 
     span {
       margin: 0 .3rem;
+    }
+  }
+}
+
+/* 13. Write to */
+.write-to {
+  &__article {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item {
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__link {
+    font-size: 2rem;
+    color: $gold;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+}
+
+/* 14. Map */
+.map {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+/* 15. Contact form */
+.contact-form {
+  &__image {
+    source,
+    img {
+      max-width: 140px;
+      margin-bottom: 4rem;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__form {
+
+    p {
+      text-align: left;
+    }
+  }
+
+  &__wrapp {
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  .wpcf7-form {
+
+    & > p {
+      @media (min-width: $screen-md) {
+        width: 100%;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .wpcf7-submit {
+      background-color: transparent;
+      color: $font-color;
+      border: solid 1px $font-color;
+      transition: .2s;
+      font-size: .9rem;
+      text-transform: uppercase;
+      padding: .5rem 2rem;
+      margin-top: 1rem;
+      font-weight: 700;
+
+      @media (min-width: $screen-md) {
+        padding: .5rem 3.5rem;
+      }
+
+      &:hover {
+        color: $white;
+        background-color: $font-color;
+      }
+    }
+
+    .wpcf7-not-valid-tip {
+      color: $gold;
+      font-size: .9rem;
+    }
+
+    .wpcf7-form-control-wrap {
+      input,
+      textarea {
+        border: none;
+        border-bottom: solid 1px #ccc;
+        transition: .2s;
+        padding: 1rem;
+        width: 100%;
+        font-size: 1rem;
+
+        &:focus {
+          outline: 0;
+          border-bottom-color: $gold;
+        }
+      }
+
+      textarea {
+        max-height: 200px;
+      }
+    }
+  }
+}
+
+/* 16. Paragraph */
+.parahraph {
+
+  &__article {
+    text-align: left;
+  }
+
+  &__image {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    source,
+    img {
+      max-width: 60%;
+
+      @media (min-width: $screen-md) {
+        max-width: 80%;
+      }
+    }
+  }
+
+  &__description {
+    font-weight: 300;
+
+    @media (min-width: $screen-md) {
+      text-align: left;
+    }
+  }
+}
+
+/* 17. Cinnosty */
+.cinnosty {
+
+  &__item {
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__article {
+    margin-bottom: 10rem;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 15rem;
+    }
+  }
+
+  &___thumb {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 7rem;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      border: 2px solid #eee;
+      width: 9rem;
+      height: 9rem;
+      transform: rotate(-45deg);
+      margin-left: -4.5rem;
+      margin-top: -4.5rem;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      border: 2px solid #eee;
+      width: 10rem;
+      height: 10rem;
+      transform: rotate(-45deg);
+      margin-left: -5rem;
+      margin-top: -5rem;
     }
   }
 }

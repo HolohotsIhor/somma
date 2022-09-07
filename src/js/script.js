@@ -74,15 +74,18 @@ $(document).ready(function(d, w) {
     const addAnimation = (className, addClassName) => {
         $(className).each(function() {
             const imagePos = $(this).offset().top;
-            const topOfWindow = $(w).scrollTop();
-
+            const topOfWindow = $(window).scrollTop();
             if (imagePos < topOfWindow + 800) {
-                $(this).addClass(`${addClassName} no-delay`);
+                $(this).addClass(`${addClassName}`);
+                $(this).css('opacity', '1');
             }
         });
     };
 
     $(w).scroll(function() {
         addAnimation('.mov', 'fadeIn');
+        addAnimation('.mov-left', 'fadeInLeftBig');
+        addAnimation('.mov-right', 'fadeInRightBig');
+        addAnimation('.mov-bounce', 'bounce');
     });
 }(document, window));

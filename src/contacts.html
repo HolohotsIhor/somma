@@ -9,35 +9,94 @@
 </head>
 
 <body>
-@@include('_header.html')
+	@@include('_header.html')
 
-<!-- Breadcrumbs section -->
-<section class="breadcrumbs">
-	<div class="container">
-		<div class="breadcrumbs__nav">
+	<!-- Breadcrumbs section -->
+	<section class="breadcrumbs">
+		<div class="container">
+			<div class="breadcrumbs__nav">
 			<span property="itemListElement" typeof="ListItem">
 				<a property="item" typeof="WebPage" title="Перейти к Kremen Land." href="#" class="home">
 					<span property="name">Sonma</span>
 				</a>
 			</span>
-			>
-			<span property="itemListElement" typeof="ListItem">
+				>
+				<span property="itemListElement" typeof="ListItem">
 				<span property="name" class="post post-page current-item">Контакти</span>
 				<meta property="url" content="#"><meta property="position" content="2">
 			</span>
+			</div>
+			<h1 class="breadcrumbs__title">Контакти</h1>
 		</div>
-	</div>
-</section>
+	</section>
 
-<!-- Contact section -->
-<section class="section contact-page">
-	<div class="container">
-		<div class="row">
-
+	<!-- Write to -->
+	<section class="section write-to">
+		<div class="container">
+			<div class="write-to__item">
+				<h4 class="write-to__article">Є питання?</h4>
+				<a href="mailto:sonmainfo@gmail.com" class="write-to__link">sonmainfo@gmail.com</a>
+			</div>
+			<div class="write-to__item">
+				<h4 class="write-to__article">Хочеш замовити?</h4>
+				<a href="mailto:sonmainfo@gmail.com mov fadeIn" class="write-to__link">sonmainfo@gmail.com</a>
+			</div>
 		</div>
-	</div>
-</section>
-@@include('_footer.html')
+	</section>
+
+	<!-- Map section -->
+	<section class="section map">
+		<div class="container">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2584.3546597823442!2d24.280439034044957!3d49.6287698881308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473a922fb42377c3%3A0xe12e8a160aa8004d!2sVulytsya%20Halyts%CA%B9ka%2C%20168%2C%20Bibrka%2C%20L&#39;vivs&#39;ka%20oblast%2C%2081220!5e0!3m2!1sen!2sua!4v1662545921675!5m2!1sen!2sua" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+	</section>
+
+	<!-- Contact form -->
+	<section class="section contact-form">
+		<div class="container">
+			<div class="row">
+				<div class="contact-form__image col-md-5">
+					<div class="contact-form__wrapp">
+						<h3 class="mov-left">Написати нам</h3>
+						<img src="img/contact-mail.jpg" alt="contact-mail" class="mov-bounce mov">
+					</div>
+				</div>
+				<div class="contact-form__form col-md-7">
+					<div class="wp-block-contact-form-7-contact-form-selector">
+						<div role="form" class="wpcf7" id="wpcf7-f66-p16-o1" lang="ru-RU" dir="ltr">
+							<form action="#" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+								<p>
+									<span class="wpcf7-form-control-wrap your-name">
+										<input placeholder="Ім'я" type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+									</span>
+								</p>
+								<p>
+									<span class="wpcf7-form-control-wrap your-email">
+										<input placeholder="Email" type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false">
+									</span>
+								</p>
+								<p>
+									<span class="wpcf7-form-control-wrap tel-441">
+										<input placeholder="Телефон" type="tel" name="tel-441" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false">
+									</span>
+								</p>
+								<p>
+									<span class="wpcf7-form-control-wrap your-message">
+										<textarea placeholder="Ваше повідомлення" name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea>
+									</span>
+								</p>
+								<p>
+									<input type="submit" value="Отправить" class="wpcf7-form-control has-spinner wpcf7-submit">
+								</p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	@@include('_footer.html')
 <script src="js/script.min.js"></script>
 </body>
 </html>
