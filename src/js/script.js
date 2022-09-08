@@ -8,6 +8,9 @@ $(document).ready(function(d, w) {
     /* Owl carousel */
     const owl = $(".owl-slider");
     const owlClients = $(".clients__owl-carousel");
+    const subMenu = $(".header__menu .sub-menu");
+
+    subMenu.addClass('fadeInLeftBigFast');
 
     owl.owlCarousel({
         nav: true,

@@ -16,6 +16,8 @@
   15. Contact form
   16. Paragraph
   17. Cinnosty
+  18. Akcija
+  19. Work zone
 */
 
 /* 1.  Includes */
@@ -82,20 +84,6 @@ body {
   transition-duration: 1s;
 }
 
-@-webkit-keyframes fadeInLeftBig {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-2000px, 0, 0);
-    transform: translate3d(-2000px, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
 @keyframes fadeInLeftBig {
   from {
     opacity: 0;
@@ -111,6 +99,12 @@ body {
 .fadeInLeftBig {
   animation-name: fadeInLeftBig;
   animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fadeInLeftBigFast {
+  animation-name: fadeInLeftBig;
+  animation-duration: .2s;
   animation-fill-mode: both;
 }
 
@@ -1673,9 +1667,14 @@ p {
 
 /* 17. Cinnosty */
 .cinnosty {
+  &__box {
+    margin-bottom: 3rem;
+  }
 
   &__item {
+    opacity: 0;
     padding-bottom: 4rem;
+    margin-top: 6rem;
     border-bottom: 1px solid #eee;
   }
 
@@ -1684,11 +1683,7 @@ p {
   }
 
   &__article {
-    margin-bottom: 10rem;
-
-    @media (min-width: $screen-md) {
-      margin-bottom: 15rem;
-    }
+    margin-bottom: 4rem;
   }
 
   &___thumb {
@@ -1720,6 +1715,66 @@ p {
       transform: rotate(-45deg);
       margin-left: -5rem;
       margin-top: -5rem;
+    }
+  }
+}
+
+/* 18. Akcija */
+.akcii {
+  &__image {
+    position: relative;
+    margin-bottom: 2rem;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $gold;
+    color: $white;
+    margin-bottom: 0;
+    min-height: 100px;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    @media (min-width: $screen-md) {
+      padding: 2rem;
+    }
+  }
+
+  &__article {
+    text-align: left;
+
+    @media (min-width: $screen-md) {
+      line-height: 3rem;
+    }
+  }
+
+  &__description {
+    @media (min-width: $screen-md) {
+      text-align: left;
+    }
+  }
+}
+
+/* 19. Work zone */
+.work-zone {
+  &__article {
+    text-align: left;
+  }
+
+  &__description {
+    text-align: left;
+
+    &--last {
+      margin-bottom: 2rem;
     }
   }
 }

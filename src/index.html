@@ -263,36 +263,8 @@
 	</div>
 </section>
 
-<!-- Feedback form -->
-<section class="section feedback-form">
-	<div class="container">
-		<div class="article-line">
-			<h3 class="mov-bounce mov">Залишилися питання?</h3>
-		</div>
-		<p class="feedback-form__help mov">Заповніть форму нижче і наш менеджер зв'яжеться з Вами</p>
-		<form action="/kremen/kontakty/#wpcf7-f66-p16-o1" method="post" class="wpcf7-form invalid" novalidate="novalidate" data-status="invalid">
-			<p>
-				<span class="wpcf7-form-control-wrap your-name">
-					<input placeholder="Ім'я" type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid" aria-required="true" aria-invalid="true" aria-describedby="wpcf7-f66-p16-o1-ve-your-name">
-<!--					<span class="wpcf7-not-valid-tip" aria-hidden="true">Поле обязательно для заполнения.</span>-->
-				</span> </label>
-			</p>
-			<p>
-				<span class="wpcf7-form-control-wrap your-email">
-					<input placeholder="Email" type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email wpcf7-not-valid" aria-required="true" aria-invalid="true" aria-describedby="wpcf7-f66-p16-o1-ve-your-email">
-<!--					<span class="wpcf7-not-valid-tip" aria-hidden="true">Поле обязательно для заполнения.</span>-->
-				</span>
-			</p>
-			<p>
-				<span class="wpcf7-form-control-wrap tel-441">
-					<input placeholder="Телефон" type="tel" name="tel-441" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel wpcf7-not-valid" aria-required="true" aria-invalid="true" aria-describedby="wpcf7-f66-p16-o1-ve-tel-441">
-<!--					<span class="wpcf7-not-valid-tip" aria-hidden="true">Поле обязательно для заполнения.</span>-->
-				</span>
-			</p>
-			<p><input type="submit" value="Отправить" class="wpcf7-form-control has-spinner wpcf7-submit"></p>
-		</form>
-	</div>
-</section>
+@@include('_questions.html')
+
 @@include('_footer.html')
 <script src="js/script.min.js"></script>
 </body>
