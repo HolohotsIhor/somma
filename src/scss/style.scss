@@ -1633,9 +1633,19 @@ p {
 
 /* 16. Paragraph */
 .parahraph {
+  &.section {
+    padding-bottom: 0;
+  }
 
   &__article {
     text-align: left;
+  }
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
 
   &__image {
@@ -1667,6 +1677,10 @@ p {
 
 /* 17. Cinnosty */
 .cinnosty {
+  &.section {
+    padding-bottom: 0;
+  }
+
   &__box {
     margin-bottom: 3rem;
   }
@@ -1721,6 +1735,10 @@ p {
 
 /* 18. Akcija */
 .akcii {
+  &.section {
+    padding-bottom: 0;
+  }
+
   &__image {
     position: relative;
     margin-bottom: 2rem;
@@ -1766,8 +1784,23 @@ p {
 
 /* 19. Work zone */
 .work-zone {
+
+  &.section {
+    padding-bottom: 0;
+  }
+
   &__article {
     text-align: left;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &--list {
+      margin-bottom: 1rem;
+    }
   }
 
   &__description {
@@ -1775,6 +1808,23 @@ p {
 
     &--last {
       margin-bottom: 2rem;
+    }
+  }
+
+  &__list {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  &__list-item {
+    font-size: 1rem;
+    line-height: 2rem;
+    list-style: none;
+    font-weight: 300;
+
+    @media (min-width: $screen-md) {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
     }
   }
 }
