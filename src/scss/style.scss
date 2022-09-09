@@ -1288,6 +1288,7 @@ p {
       padding: .5rem 2rem;
       margin-top: 1rem;
       font-weight: 700;
+      border-radius: 0;
 
       @media (min-width: $screen-md) {
         padding: .5rem 3.5rem;
@@ -1312,6 +1313,7 @@ p {
         padding: 1rem;
         width: 100%;
         font-size: 1rem;
+        border-radius: 0;
 
         &:focus {
           outline: 0;
@@ -1341,6 +1343,11 @@ p {
   background-repeat: no-repeat;
   background-position-y: bottom;
   background-position-x: center;
+  background-size: cover;
+
+  &__image {
+    text-align: center;
+  }
 
   &__logo {
     display: inline-block;
@@ -1593,6 +1600,7 @@ p {
       padding: .5rem 2rem;
       margin-top: 1rem;
       font-weight: 700;
+      border-radius: 0;
 
       @media (min-width: $screen-md) {
         padding: .5rem 3.5rem;
@@ -1618,6 +1626,7 @@ p {
         padding: 1rem;
         width: 100%;
         font-size: 1rem;
+        border-radius: 0;
 
         &:focus {
           outline: 0;
