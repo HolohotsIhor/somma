@@ -8,7 +8,9 @@ $(document).ready(function(d, w) {
     /* Owl carousel */
     const owl = $(".owl-slider");
     const owlClients = $(".clients__owl-carousel");
+    const headerItem = $("#header");
     const subMenu = $(".header__menu .sub-menu");
+    const parentMenuItem = $(".menu-item-has-children");
 
     subMenu.addClass('fadeInLeftBigFast');
 
@@ -90,5 +92,10 @@ $(document).ready(function(d, w) {
         addAnimation('.mov-left', 'fadeInLeftBig');
         addAnimation('.mov-right', 'fadeInRightBig');
         addAnimation('.mov-bounce', 'bounce');
+    });
+
+    /* Burger */
+    parentMenuItem.click(function() {
+        headerItem.toggleClass("sticky");
     });
 }(document, window));
