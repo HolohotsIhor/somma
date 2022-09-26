@@ -393,6 +393,31 @@ p {
     &.sticky {
       color: $font-color;
 
+      .menu {
+        li {
+          &.menu-item-has-children {
+            & > a {
+              &:after,
+              &:before {
+                background-color: #3f3f3f;
+              }
+            }
+
+            &.active {
+              & > a {
+                &:after {
+                  transform: rotate(135deg);
+                }
+
+                &:before {
+                  transform: rotate(-135deg);
+                }
+              }
+            }
+          }
+        }
+      }
+
       .header__logo source,
       .header__logo img {
         max-width: 100px;
@@ -687,21 +712,43 @@ p {
         }
 
         &.menu-item-has-children {
+          cursor: pointer;
+        }
 
-          .sub-menu {
-            &:hover {
-              display: block;
-            }
+        &.menu-item-has-children > a {
+          pointer-events: none;
+          position: relative;
+
+          &:after,
+          &:before {
+            position: absolute;
+            top: 5px;
+            content: "";
+            background-color: #fff;
+            width: 7px;
+            height: 2px;
+            transform: rotate(45deg);
+            transition: .2s;
           }
 
-          &:hover {
+          &:after {
+            right: -10px;
+            transform: rotate(45deg);
+          }
+
+          &:before {
+            right: -15px;
+            transform: rotate(-45deg);
+          }
+        }
+
+        &.menu-item-has-children.active {
             .sub-menu {
-              position: relative;
               justify-content: center;
               z-index: 1;
               display: flex;
               position: absolute;
-              bottom: -3rem;
+              bottom: -3.5rem;
               left: 0;
               width: 100%;
               padding-top: 3.2rem;
@@ -739,7 +786,6 @@ p {
                 }
               }
             }
-          }
         }
 
         &.current-menu-item {

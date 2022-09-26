@@ -11,6 +11,7 @@ $(document).ready(function(d, w) {
     const headerItem = $("#header");
     const subMenu = $(".header__menu .sub-menu");
     const parentMenuItem = $(".menu-item-has-children");
+    const isMenuActive = false;
 
     subMenu.addClass('fadeInLeftBigFast');
 
@@ -96,6 +97,12 @@ $(document).ready(function(d, w) {
 
     /* Burger */
     parentMenuItem.click(function() {
-        headerItem.toggleClass("sticky");
+        $(this).toggleClass('active');
+        logo.classList.add("sticky");
+        logoLight.classList.add("sticky");
+        if (!isMenuActive) {
+            headerItem.addClass("sticky");
+            isMenuActive = true;
+        }
     });
 }(document, window));
