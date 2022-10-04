@@ -327,6 +327,80 @@ p {
   font-weight: 300;
 }
 
+.header__currency-switcher {
+  margin-left: 1rem;
+  padding-top: 2px;
+
+  .wcml-dropdown {
+    max-width: 49px;
+  }
+
+  .wcml_currency_switcher {
+    margin: 0;
+    width: unset;
+
+    .wcml-cs-submenu {
+      color: #333;
+
+      li {
+        &:hover {
+          background-color: #1e90ff;
+          color: white;
+          border-color: #333;
+          border-top: solid 1px #333;
+        }
+      }
+    }
+
+    .wcml-cs-active-currency {
+      text-transform: uppercase;
+      font-size: .8rem;
+      background-color: transparent;
+      border: none;
+      color: white;
+
+      .wcml-cs-item-toggle {
+        color: white;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.wcml-dropdown a.wcml-cs-item-toggle:after {
+  content: "";
+  vertical-align: unset;
+  display: block;
+  border: none;
+  border-top: unset;
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  height: 2px;
+  width: 6px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.wcml-dropdown a.wcml-cs-item-toggle:before {
+  content: "";
+  vertical-align: unset;
+  display: block;
+  border: none;
+  border-top: unset;
+  position: absolute;
+  right: 6px;
+  top: 9px;
+  height: 2px;
+  width: 6px;
+  background: #fff;
+  transform: rotate(138deg);
+}
+
 .social {
   margin-right: 2rem;
 
@@ -397,6 +471,70 @@ p {
   @media (min-width: $screen-md) {
     &.sticky {
       color: $font-color;
+
+      .header__currency-switcher {
+        margin-left: 1rem;
+        padding-top: 2px;
+
+        .wcml-dropdown {
+          max-width: 49px;
+        }
+
+        .wcml_currency_switcher {
+          margin: 0;
+          width: unset;
+
+          .wcml-cs-submenu {
+            color: #333;
+          }
+
+          .wcml-cs-active-currency {
+            text-transform: uppercase;
+            font-size: .8rem;
+            background-color: transparent;
+            border: none;
+            color: #333;
+
+            .wcml-cs-item-toggle {
+              color: #333;
+            }
+
+            &:hover,
+            &:focus {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+
+      .wcml-dropdown a.wcml-cs-item-toggle:after {
+        content: "";
+        vertical-align: unset;
+        display: block;
+        border: none;
+        border-top: unset;
+        position: absolute;
+        right: 10px;
+        height: 2px;
+        width: 6px;
+        background: #333;
+        transform: rotate(45deg);
+      }
+
+      .wcml-dropdown a.wcml-cs-item-toggle:before {
+        content: "";
+        vertical-align: unset;
+        display: block;
+        border: none;
+        border-top: unset;
+        position: absolute;
+        right: 6px;
+        top: 9px;
+        height: 2px;
+        width: 6px;
+        background: #333;
+        transform: rotate(138deg);
+      }
 
       .menu {
         li {
@@ -770,7 +908,7 @@ p {
 
             li {
               background-color: #3f3f3f;
-              padding: 1.5rem 2rem;
+              padding: 1.4rem 2rem;
               margin-right: 0;
 
               &.current-menu-item {
@@ -1811,6 +1949,14 @@ p {
 }
 
 /* 18. Akcija */
+.work-zone__wrapp {
+  .akcii {
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
 .akcii {
   &.section {
     padding-bottom: 0;
@@ -2021,6 +2167,3 @@ p {
 }
 
 /* 21. WC shop */
-.woocommerce-result-count {
-  display: none;
-}

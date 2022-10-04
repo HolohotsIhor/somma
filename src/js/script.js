@@ -100,6 +100,7 @@ $(document).ready(function(d, w) {
         $(this).toggleClass('active');
         logo.classList.add("sticky");
         logoLight.classList.add("sticky");
+
         if (!isMenuActive) {
             headerItem.addClass("sticky");
             isMenuActive = true;
