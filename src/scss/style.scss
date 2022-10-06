@@ -341,6 +341,7 @@ p {
 
     .wcml-cs-submenu {
       color: #333;
+      border-top: none;
 
       li {
         &:hover {
@@ -2167,3 +2168,6 @@ p {
 }
 
 /* 21. WC shop */
+.wcus-checkout-fields {
+  display: block !important;
+}
