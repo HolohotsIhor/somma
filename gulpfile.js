@@ -1,11 +1,11 @@
 /* 	************** 
 	VARIEBLES
 	************** */
-const project_folder = "dist"; // Final project directory
-const source_folder = "src";   // Source directory
+let project_folder = "dist"; // Final project directory
+let source_folder = "src";   // Source directory
 
 // Full project links
-const path={
+let path={
 	build: {
 		html: project_folder + "/",
 		css: project_folder + "/css/",
@@ -30,7 +30,7 @@ const path={
 };
 
 // Plugins variables
-const {src, dest} = require('gulp'),
+let {src, dest} = require('gulp'),
 	gulp = require('gulp'),
 	browsersync = require('browser-sync').create(),
 	fileinclude = require('gulp-file-include'),
@@ -145,8 +145,8 @@ function clean() {
 	return del(path.clean);
 }
 
-const build = gulp.series(clean, gulp.parallel(js, css, html, images));
-const watch = gulp.parallel(build, watchFiles, browserSync);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images));
+let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.images = images;
 exports.js = js;

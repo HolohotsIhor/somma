@@ -11,7 +11,9 @@ $(document).ready(function(d, w) {
     const headerItem = $("#header");
     const subMenu = $(".header__menu .sub-menu");
     const parentMenuItem = $(".menu-item-has-children");
-    const isMenuActive = false;
+    let isMenuActive = false;
+    const filter = $(".filter-title");
+    const filterContent = $(".filter-content");
 
     subMenu.addClass('fadeInLeftBigFast');
 
@@ -70,9 +72,11 @@ $(document).ready(function(d, w) {
             logo.classList.add("sticky");
             logoLight.classList.add("sticky");
         } else {
-            header.classList.remove("sticky");
-            logo.classList.remove("sticky");
-            logoLight.classList.remove("sticky");
+            if (!parentMenuItem.hasClass('active')) {
+                header.classList.remove("sticky");
+                logo.classList.remove("sticky");
+                logoLight.classList.remove("sticky");
+            }
         }
     }
 
@@ -97,13 +101,32 @@ $(document).ready(function(d, w) {
 
     /* Burger */
     parentMenuItem.click(function() {
-        $(this).toggleClass('active');
         logo.classList.add("sticky");
         logoLight.classList.add("sticky");
+
+        if (!headerItem.hasClass("sticky")) {
+            headerItem.addClass("sticky");
+        }
 
         if (!isMenuActive) {
             headerItem.addClass("sticky");
             isMenuActive = true;
         }
+    });
+
+    filter.click(function() {
+        filter.toggleClass("unactive");
+        filterContent.toggleClass("unactive");
+    });
+
+    $("#checkout-submit").click(function() {
+        let finalAdress = $("#billing_city");
+        const city = $(".zen-ui-select-1 .zen-ui-select__value-text").html();
+        const viddilennja = $(".zen-ui-select-2 .zen-ui-select__value-text").html();
+        const fullAdress = city + ". Нова Пошта. " + viddilennja;
+
+        finalAdress.val(fullAdress);
+
+        $("#place_order").trigger("click");
     });
 }(document, window));
